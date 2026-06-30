@@ -4,6 +4,7 @@ This repository contains R scripts used to produce spatial figures and the
 species identification confidence heatmap for the manuscript:
 
 > Who knows what? Local ecological knowledge of rhino rays among coastal ocean users in South Africa
+> 
 > Mia J. Groeneveld, Evan Nazareth, Juliana D. Klein, Michaela van Staden, Rhett H. Bennett, Aletta E. Bester- van der Merwe
 
 ## Data availability
