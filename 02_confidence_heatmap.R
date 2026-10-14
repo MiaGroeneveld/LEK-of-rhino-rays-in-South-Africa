@@ -14,32 +14,31 @@ library(dplyr)
 # ------------------------------------------------------------
 data <- data.frame(
   user_group = c("Water sports participants", "Divers", "Recreational fishers",
-                 "Coastal residents", "Researchers",
-                 "Subsistence fishers", "Commercial fishers"),
+                 "Coastal residents", "Researchers"),
 
-  lesser_n = c(37, 34, 65,  9,  9, 3, 2),
-  lesser_N = c(70, 62, 71, 21, 10, 3, 2),
-  lesser_c = c(0.37, 0.39, 0.45, 0.26, 0.47, 0.47, 0.29),
+  lesser_n = c(37, 34, 65,  9,  9),
+  lesser_N = c(70, 62, 71, 21, 10),
+  lesser_c = c(0.37, 0.39, 0.45, 0.26, 0.47),
 
-  blunt_n  = c(19,  8, 28,  4,  1, 0, 1),
-  blunt_N  = c(67, 58, 70, 19, 10, 2, 2),
-  blunt_c  = c(0.54, 0.51, 0.44, 0.35, 0.50, NA, 0.25),
+  blunt_n  = c(19,  8, 28,  4,  1),
+  blunt_N  = c(67, 58, 70, 19, 10),
+  blunt_c  = c(0.54, 0.51, 0.44, 0.35, 0.50),
 
-  grey_n   = c(10, 10, 24,  4,  4, 0, 1),
-  grey_N   = c(66, 57, 71, 20, 10, 2, 2),
-  grey_c   = c(0.44, 0.48, 0.44, 0.40, 0.71, NA, 0.08),
+  grey_n   = c(10, 10, 24,  4,  4),
+  grey_N   = c(66, 57, 71, 20, 10),
+  grey_c   = c(0.44, 0.48, 0.44, 0.40, 0.71),
 
-  speck_n  = c( 6,  5,  8,  4,  0, 0, 1),
-  speck_N  = c(68, 56, 69, 19, 10, 2, 2),
-  speck_c  = c(0.38, 0.17, 0.31, 0.29, NA, NA, 0.08),
+  speck_n  = c( 6,  5,  8,  4,  0),
+  speck_N  = c(68, 56, 69, 19, 10),
+  speck_c  = c(0.38, 0.17, 0.31, 0.29, NA),
 
-  bow_n    = c( 2, 11, 25,  2,  4, 0, 0),
-  bow_N    = c(66, 57, 71, 20, 10, 2, 2),
-  bow_c    = c(0.46, 0.68, 0.53, 0.38, 0.65, NA, NA),
+  bow_n    = c( 2, 11, 25,  2,  4),
+  bow_N    = c(66, 57, 71, 20, 10),
+  bow_c    = c(0.46, 0.68, 0.53, 0.38, 0.65),
 
-  wedge_n  = c(13, 13, 32,  4,  5, 1, 1),
-  wedge_N  = c(66, 55, 72, 20, 10, 2, 2),
-  wedge_c  = c(0.39, 0.47, 0.44, 0.19, 0.62, 0.25, 0.25),
+  wedge_n  = c(13, 13, 32,  4,  5),
+  wedge_N  = c(66, 55, 72, 20, 10),
+  wedge_c  = c(0.39, 0.47, 0.44, 0.19, 0.62),
 
   stringsAsFactors = FALSE
 )
@@ -70,8 +69,7 @@ long <- long %>%
 long$species <- factor(long$species, levels = species_list)
 
 group_order <- c("Water sports participants", "Divers", "Recreational fishers",
-                  "Coastal residents", "Researchers",
-                  "Subsistence fishers", "Commercial fishers")
+                  "Coastal residents", "Researchers")
 long$user_group <- factor(long$user_group, levels = rev(group_order))
 
 # ------------------------------------------------------------
